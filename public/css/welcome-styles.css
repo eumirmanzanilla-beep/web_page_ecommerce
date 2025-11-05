@@ -1,0 +1,88 @@
+/* ==================================================================== */
+/* 1. Estilos Globales, Tipografía y Header Fijo */
+/* ==================================================================== */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Fondo gris claro */
+    padding-top: 70px; /* Espacio para el header fijo */
+}
+
+.main-header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* Ajuste para que el Logo/Título esté realmente alineado a la derecha en la columna izquierda */
+.header-logo .navbar-brand {
+    margin-right: 0;
+}
+
+/*
+* ====================================================================
+* 2. Carousel Sizing (Control de Altura)
+* ====================================================================
+*/
+.carousel {
+    /* Altura máxima semántica de 350px para evitar que sea muy largo */
+    max-height: 350px;
+    overflow: hidden;
+    margin-bottom: 3rem; 
+}
+
+.carousel-inner,
+.carousel-item {
+    max-height: 350px;
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Forzar la altura y usar 'cover' para que la imagen siempre llene el espacio */
+    height: 350px; 
+    object-fit: cover; 
+}
+
+/*
+* ====================================================================
+* 3. Estilos de Tarjetas (Cards)
+* ====================================================================
+*/
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: none; /* Eliminar el borde por defecto de Bootstrap */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 180px; /* Altura fija para las imágenes de las tarjetas */
+    object-fit: cover;
+}
+
+/*
+* ====================================================================
+* 4. Estilos Responsive (Móvil)
+* ====================================================================
+*/
+@media (max-width: 576px) {
+    .header-logo, .header-auth, .nav-buttons {
+        /* Centra todos los elementos del header en móvil para que no se vea desordenado */
+        text-align: center !important;
+        justify-content: center !important;
+        margin-top: 0.5rem;
+    }
+    body {
+        /* Más padding para el header que ahora ocupa más líneas */
+        padding-top: 150px; 
+    }
+}

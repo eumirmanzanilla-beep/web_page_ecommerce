@@ -29,24 +29,26 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        // ✅ Validar solo los campos que existen en tu tabla
+        // 1. VALIDACIÓN COMPLETA Y SEGURA
         $request->validate([
             'username' => ['required', 'string', 'max:255', 'unique:login_users,username'],
+            // Se añade la validación del email para reseteo de contraseña
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:login_users,email'], 
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        // ✅ Crear el usuario en tu tabla personalizada
+        // 2. CREACIÓN DE USUARIO LIMPIA
+        // El hashing se realiza automáticamente por el modelo LoginUser.
         $user = LoginUser::create([
             'username' => $request->username,
-            'password' => Hash::make($request->password),
+            'email' => $request->email, // Se guarda el email
+            'password' => $request->password, // Se elimina Hash::make()
         ]);
 
         event(new Registered($user));
 
-        // ✅ Iniciar sesión automáticamente después del registro
         Auth::login($user);
 
-        // ✅ Redirigir al dashboard
         return redirect()->route('dashboard');
     }
 }

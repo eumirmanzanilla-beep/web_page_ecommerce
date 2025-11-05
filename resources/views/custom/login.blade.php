@@ -40,6 +40,9 @@
             <p class="text-center mt-3 mb-0">
                 ¿No tienes cuenta? <a href="{{ route('register') }}">Regístrate</a>
             </p>
+            <p class="text-center mt-3 mb-0">
+                ¿Olvidaste tu contraseña? <a href="{{ route('password.request') }}">Reestablecela aquí</a>
+            </p>
         </form>
     </div>
 
