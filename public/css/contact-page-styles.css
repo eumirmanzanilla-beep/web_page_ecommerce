@@ -1,0 +1,14 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; 
+}
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+.header-logo a:hover { opacity: 0.8; }
+.nav-buttons .btn-link { font-weight: 600; }
+.header-auth .btn { font-weight: 600; }

@@ -29,9 +29,9 @@
                 <!-- SECCIÓN 2 (Centro): 4 Botones de Navegación -->
                 <div class="col-12 col-sm-4 d-flex justify-content-center nav-buttons my-2 my-sm-0">
                     <a href="{{ url('/') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Inicio</a>
-                    <a href="{{ route('construccion') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Servicios</a>
-                    <a href="{{ route('products') }}" class="btn btn-link text-primary text-decoration-none px-2 px-sm-3">Productos</a>
-                    <a href="{{ route('construccion') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Contacto</a>
+                    <a href="{{ route('services') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Servicios</a>
+                    <a href="{{ route('products') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Productos</a>
+                    <a href="{{ route('contact') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Contacto</a>
                 </div>
 
                 <!-- SECCIÓN 3 (Derecha): Autenticación DINÁMICA -->

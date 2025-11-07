@@ -15,6 +15,14 @@ Route::get('/products', function() {
     return View('custom.products-page');
 })->name('products');
 
+Route::get('/services', function() {
+    return View('custom.services-page');
+})->name('services');
+
+Route::get('/contact', function() {
+    return View('custom.contact-page');
+})->name('contact');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
