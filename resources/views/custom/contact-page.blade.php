@@ -74,14 +74,14 @@
                 <!-- Columna de la Imagen -->
                 <div class="col-lg-5 d-none d-lg-block">
                     <!-- Imagen de placeholder genérica -->
-                    <img src="https://placehold.co/600x800/6c757d/ffffff?text=Nuestra+Oficina" class="card-img-left" alt="Oficina de contacto">
+                    <img src=" {{ asset('images/oficina.png') }}" class="card-img-left" alt="Oficina de contacto">
                 </div>
 
                 <!-- Columna de la Información -->
                 <div class="col-lg-7">
                     <div class="card-body p-4 p-md-5">
                         
-                        <h2 class="fw-bold text-primary mb-3">Mi Proyecto Cocinas</h2>
+                        <h2 class="fw-bold text-primary mb-3">UCanCook</h2>
                         <p class="card-text text-muted mb-4">
                             Somos líderes en el diseño e implementación de cocinas industriales. Contáctanos para una cotización o visita nuestro showroom.
                         </p>
@@ -90,8 +90,9 @@
 
                         <ul class="list-unstyled contact-info-list">
                             <li class="mb-3">
-                                <strong class="d-block text-dark">Nombre (Atención):</strong>
-                                <span>Ana Sofía Gutiérrez (Ventas)</span>
+                                <strong class="d-block text-dark">Nombre:</strong>
+                                <span>Carlos Adrian</span> <br>
+                                <span>Brian Manzanilla</span>
                             </li>
                             <li class="mb-3">
                                 <strong class="d-block text-dark">Dirección:</strong>

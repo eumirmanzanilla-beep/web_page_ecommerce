@@ -73,7 +73,7 @@
                             <!-- Tarjeta Genérica 1 -->
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/E0E0E0/909090?text=Cucharón" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/products-utensils/cucharon.jpg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Cucharón de Acero</h5>
                                         <p class="card-text">Ideal para sopas y guisos.</p>
@@ -84,7 +84,7 @@
                             <!-- Tarjeta Genérica 2 -->
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/E0E0E0/909090?text=Cuchillo" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/products-utensils/cuchillo.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Cuchillo de Chef</h5>
                                         <p class="card-text">Corte preciso, 8 pulgadas.</p>
@@ -95,7 +95,7 @@
                             <!-- Tarjeta Genérica 3 (puedes agregar más) -->
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/E0E0E0/909090?text=Espátula" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/products-utensils/Espatula.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Espátula de Goma</h5>
                                         <p class="card-text">Resistente al calor.</p>
@@ -106,7 +106,7 @@
                             <!-- Tarjeta Genérica 4 -->
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/E0E0E0/909090?text=Tenedor" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/products-utensils/Tenedores.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Juego de Tenedores</h5>
                                         <p class="card-text">Acero inoxidable (12 pzs).</p>
@@ -137,9 +137,9 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3">  
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/D5DBDB/909090?text=Estufa" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-equipment/estufa.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Estufa Industrial</h5>
                                         <p class="card-text">6 quemadores y horno.</p>
@@ -149,7 +149,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/D5DBDB/909090?text=Freidora" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-equipment/freidota.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Freidora de Aire</h5>
                                         <p class="card-text">Industrial, 20L.</p>
@@ -159,7 +159,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/D5DBDB/909090?text=Plancha" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-equipment/plancha.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Plancha de Acero</h5>
                                         <p class="card-text">Superficie antiadherente.</p>
@@ -169,7 +169,7 @@
                             </div>
                              <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/D5DBDB/909090?text=Horno" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-equipment/horno.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Horno de Convección</h5>
                                         <p class="card-text">Cocción pareja.</p>
@@ -199,7 +199,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/BDC3C7/909090?text=Bowls" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-dishes/bowls.webp') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Juego de Bowls</h5>
                                         <p class="card-text">Aluminio reforzado.</p>
@@ -209,7 +209,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/BDC3C7/909090?text=Charolas" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-dishes/charola.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Charolas para Hornear</h5>
                                         <p class="card-text">Set de 3 tamaños.</p>
@@ -239,7 +239,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/AAB7B8/909090?text=Licuadora" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-machines/licuadora.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Licuadora Industrial</h5>
                                         <p class="card-text">Alta potencia (3HP).</p>
@@ -249,7 +249,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/AAB7B8/909090?text=Batidora" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-machines/batidora.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Batidora de Pedestal</h5>
                                         <p class="card-text">10L, 3 velocidades.</p>
@@ -259,7 +259,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/AAB7B8/909090?text=Microondas" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-machines/microondas.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Microondas</h5>
                                         <p class="card-text">Uso rudo, acero.</p>
@@ -289,7 +289,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/99A3A4/909090?text=Estante" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-furniture/estante.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Estante de Aluminio</h5>
                                         <p class="card-text">4 niveles, alta resistencia.</p>
@@ -299,7 +299,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/99A3A4/909090?text=Mesa" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-furniture/mesa.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Mesa de Trabajo</h5>
                                         <p class="card-text">Acero inoxidable (1.80m).</p>
@@ -309,7 +309,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="card">
-                                    <img src="https://placehold.co/600x400/99A3A4/909090?text=Tarja" class="card-img-top" alt="Producto">
+                                    <img src="{{ asset('images/product-furniture/tarja.jpeg') }}" class="card-img-top" alt="Producto">
                                     <div class="card-body">
                                         <h5 class="card-title">Tarja Doble</h5>
                                         <p class="card-text">Grado alimenticio.</p>

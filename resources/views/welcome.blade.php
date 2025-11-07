@@ -78,20 +78,20 @@
                 <!-- Las imágenes usan placeholders con diferentes colores -->
                 <div class="carousel-item active">
                     <!-- 1200x350 es el tamaño que encaja con el max-height -->
-                    <img src="https://placehold.co/1200x400/528399/ffffff?text=BIENVENIDO" class="d-block w-100" alt="Imagen de carrusel 1">
+                    <img src="{{ asset('images/Cocina3.avif') }}" class="d-block w-100" alt="Imagen de carrusel 1">
                     <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0,0,0,0.5); border-radius: 8px;">
                         <h3 style="font-weight: 700;">Bienvenido a Mi Proyecto</h3>
                         <p>Descubre cómo podemos transformar tu negocio con tecnología de punta.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('images/Cocina.jpeg') }}" class="d-block w-100" alt="Imagen de carrusel 2">
+                    <img src="{{ asset('images/Cocina1.jpg') }}" class="d-block w-100" alt="Imagen de carrusel 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('images/Coco.jpg') }}" class="d-block w-100" alt="Imagen de carrusel 3">
+                    <img src="{{ asset('images/Cocina2.jpg') }}" class="d-block w-100" alt="Imagen de carrusel 3">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('images/Coco.jpg') }}" class="d-block w-100" alt="Imagen de carrusel 4">
+                    <img src="{{ asset('images/Cocina4.jpg') }}" class="d-block w-100" alt="Imagen de carrusel 4">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -116,7 +116,11 @@
                         <img src="https://placehold.co/600x180/4A90E2/ffffff?text=Adaptabilidad" class="card-img-top" alt="Adaptabilidad">
                         <div class="card-body">
                             <h5 class="card-title text-primary" style="font-weight: 600;">Adaptabilidad Total</h5>
-                            <p class="card-text">Nuestras soluciones escalan con tu negocio, adaptándose a cualquier volumen de trabajo sin comprometer el rendimiento.</p>
+                            <p class="card-text">
+                                En nuestro diccionario no existe la palabra imposible. 
+                                El equipo de trabajo está totalmente capacitado para adptarse a cualquier problema. 
+                                Lo difícil se vuelve fácil, y lo imposible, posible.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -124,10 +128,13 @@
                 <!-- CARD 2: En la primera fila, lado derecho -->
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/28a745/ffffff?text=Seguridad" class="card-img-top" alt="Seguridad">
+                        <img src="https://placehold.co/600x180/28a745/ffffff?text=Responsabilidad" class="card-img-top" alt="Seguridad">
                         <div class="card-body">
-                            <h5 class="card-title text-success" style="font-weight: 600;">Seguridad Reforzada</h5>
-                            <p class="card-text">Implementamos protocolos de seguridad de nivel industrial para proteger tus datos y los de tus clientes las 24 horas del día.</p>
+                            <h5 class="card-title text-success" style="font-weight: 600;">Responsabilidad</h5>
+                            <p class="card-text">
+                                Nuestra prioridad es la tranquilidad del cliente. El trabajo de una empresa habla más que sus propias palabras,
+                                por eso nos comprometemos totalmente con cualquier trabajo, tanto en las buenas como en las malas, hasta que la muerte nos separe.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -137,7 +144,7 @@
                 <!-- CARD 3: En la segunda fila, lado izquierdo -->
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/ffc107/333333?text=Comunidad" class="card-img-top" alt="Comunidad">
+                        <img src="https://placehold.co/600x180/ffc107/333333?text=" class="card-img-top" alt="Comunidad">
                         <div class="card-body">
                             <h5 class="card-title text-warning" style="font-weight: 600;">Comunidad Activa</h5>
                             <p class="card-text">Únete a una red de profesionales y recibe el mejor soporte de nuestra comunidad y nuestro equipo de expertos.</p>

@@ -89,7 +89,7 @@
                     <img src="https://placehold.co/600x350/28a745/ffffff?text=Planificación" class="card-img-top" alt="Planificación de cocina">
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title fw-semibold text-success">Planificación</h3>
-                        <p class="card-text text-muted">Diseñamos el *layout* de tu cocina para maximizar la eficiencia, el flujo de trabajo y cumplir con todas las normativas de sanidad. Creamos el plano perfecto para tu espacio.</p>
+                        <p class="card-text text-muted">Diseñamos el boceto de tu cocina para maximizar la eficiencia, el flujo de trabajo y cumplir con todas las normativas de sanidad. Creamos el plano perfecto para tu espacio.</p>
                         <div class="mt-auto">
                             <a href="#" class="btn btn-outline-success rounded-pill px-4">Obtener Detalles</a>
                         </div>

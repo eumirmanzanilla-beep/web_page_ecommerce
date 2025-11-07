@@ -1,45 +1,111 @@
+/* === ESTILOS GLOBALES Y HEADER === */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Un fondo ligeramente gris */
+    background-color: #f8f9fa; 
 }
-/* Reutilizamos el estilo del header de welcome */
+
 .main-header {
     background-color: #ffffff;
     border-bottom: 1px solid #e9ecef;
-    position: sticky;
+    position: sticky; /* Header fijo */
     top: 0;
     z-index: 1020;
-}   
-.header-logo a:hover {
-    opacity: 0.8;
 }
-.nav-buttons .btn-link {
-    font-weight: 600;
-}
-.header-auth .btn {
-    font-weight: 600;
-}
-/* Estilo para los encabezados de sección */
+
+/* Estilos consistentes para el header (copiados de otras páginas) */
+.header-logo a:hover { opacity: 0.8; }
+.nav-buttons .btn-link { font-weight: 600; }
+.header-auth .btn { font-weight: 600; }
+
+/* === ENCABEZADO DE SECCIÓN (Utensilios, Trastes, etc.) === */
 .section-header {
     font-weight: 700;
     color: #343a40;
-    border-bottom: 3px solid #4A90E2;
+    border-bottom: 3px solid #4A90E2; /* Color de acento del logo */
     padding-bottom: 10px;
-    display: inline-block;
+    display: inline-block; /* Evita que el borde ocupe toda la línea */
 }
-/* Personalización de controles de carrusel para fondo blanco */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 20px;
-    background-size: 50% 50%;
+
+
+/* =========================================
+=== SOLUCIÓN PARA IMÁGENES DE TARJETA ===
+=========================================
+*/
+
+/* 1. ESTANDARIZAR TAMAÑO DE IMAGEN (Tu Requisito Principal) */
+.card .card-img-top {
+    /* Fija una altura estándar para todas las imágenes */
+    height: 220px; 
+    width: 100%;
+    
+    /* Esta es la propiedad clave:
+       - 'cover' recorta la imagen para que llene el espacio sin distorsionarse.
+       - 'contain' la encajaría, pero dejaría barras blancas. 
+    */
+    object-fit: cover;
+    object-position: center; /* Centra la imagen al recortar */
+    
+    /* Asegura que el borde redondeado superior de la tarjeta se aplique a la imagen */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
-}
+
+/* 2. ESTILOS GENERALES DE LA TARJETA */
 .card {
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     border: none;
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* CRÍTICO: Asegura que todas las tarjetas en una fila de carrusel tengan la misma altura */
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. ALINEACIÓN DEL CUERPO DE LA TARJETA */
+.card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* El cuerpo de la tarjeta ocupa el espacio sobrante */
+    padding: 1.25rem;
+}
+
+.card .card-title {
+    font-weight: 600;
+}
+
+.card .card-text {
+    color: #6c757d;
+    flex-grow: 1; /* Empuja el botón hacia el fondo */
+}
+
+.card .btn {
+    margin-top: 1rem; /* Espacio entre el texto y el botón */
+    font-weight: 600;
+}
+
+
+/* === ESTILOS DEL CARRUSEL (MEJORAS) === */
+
+/* Aleja un poco los controles de los bordes */
+.carousel-control-prev {
+    left: -50px; 
+}
+.carousel-control-next {
+    right: -50px;
+}
+
+/* Cambia el color de las flechas del carrusel a azul (usando SVG) */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007bff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
