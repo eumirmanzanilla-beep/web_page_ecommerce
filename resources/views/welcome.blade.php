@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Enlace al archivo CSS externo -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ asset('css/welcome-styles.css') }}">
 
 </head>
 <body class="bg-light">
@@ -21,9 +21,9 @@
         <div class="container">
             <div class="row align-items-center py-3">
                 
-                <!-- SECCIÓN 1 (Izquierda): Título y Logo, Alinear a la Derecha (dentro de la columna) -->
-                <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-end header-logo">
-                    <a class="navbar-brand d-flex align-items-center" href="#" style="font-weight: 700; color: #4A90E2;">
+                <!-- SECCIÓN 1 (Izquierda): Título y Logo -->
+                <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start header-logo">
+                    <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}" style="font-weight: 700; color: #4A90E2;">
                         <!-- Placeholder de Logo -->
                         <img src="https://placehold.co/30x30/4A90E2/ffffff?text=L" alt="Logo" width="30" height="30" class="d-inline-block me-2 rounded-circle">
                         Mi Proyecto
@@ -32,16 +32,34 @@
 
                 <!-- SECCIÓN 2 (Centro): 4 Botones de Navegación -->
                 <div class="col-12 col-sm-4 d-flex justify-content-center nav-buttons my-2 my-sm-0">
-                    <a href="#" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Inicio</a>
-                    <a href="#" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Servicios</a>
-                    <a href="#" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Precios</a>
-                    <a href="#" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Contacto</a>
+                    <a href="{{ url('/') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Inicio</a>
+                    <a href="{{ route('construccion') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Servicios</a>
+                    <a href="{{ route('products') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Productos</a>
+                    <a href="{{ route('construccion') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Contacto</a>
                 </div>
 
-                <!-- SECCIÓN 3 (Derecha): Autenticación -->
+                <!-- SECCIÓN 3 (Derecha): Autenticación DINÁMICA -->
                 <div class="col-12 col-sm-4 text-center text-sm-end header-auth">
-                    <a href="{{ route('login') }}" class="btn btn-outline-primary me-2 rounded-pill px-4" style="font-weight: 600;">Iniciar sesión</a>
-                    <a href="{{ route('register') }}" class="btn btn-primary rounded-pill px-4" style="font-weight: 600;">Registrarme</a>
+                    @auth
+                        {{-- USUARIO AUTENTICADO: Mostrar botón de perfil y logout --}}
+                        <span class="d-none d-sm-inline me-2 text-primary" style="font-weight: 600;">
+                            Hola, {{ Auth::user()->username }}
+                        </span>
+                        <a href="{{ route('profile.edit') }}" class="btn btn-primary me-2 rounded-pill px-4" style="font-weight: 600;">
+                            Ir al Perfil
+                        </a>
+                        <!-- Botón de Logout (requiere formulario POST) -->
+                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-danger rounded-pill px-4" style="font-weight: 600;">
+                                Cerrar Sesión
+                            </button>
+                        </form>
+                    @else
+                        {{-- USUARIO INVITADO: Mostrar botones de Login/Registro --}}
+                        <a href="{{ route('login') }}" class="btn btn-outline-primary me-2 rounded-pill px-4" style="font-weight: 600;">Iniciar sesión</a>
+                        <a href="{{ route('register') }}" class="btn btn-primary rounded-pill px-4" style="font-weight: 600;">Registrarme</a>
+                    @endauth
                 </div>
             </div>
         </div>
@@ -60,7 +78,7 @@
                 <!-- Las imágenes usan placeholders con diferentes colores -->
                 <div class="carousel-item active">
                     <!-- 1200x350 es el tamaño que encaja con el max-height -->
-                    <img src="#" class="d-block w-100" alt="Imagen de carrusel 1">
+                    <img src="https://placehold.co/1200x400/528399/ffffff?text=BIENVENIDO" class="d-block w-100" alt="Imagen de carrusel 1">
                     <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0,0,0,0.5); border-radius: 8px;">
                         <h3 style="font-weight: 700;">Bienvenido a Mi Proyecto</h3>
                         <p>Descubre cómo podemos transformar tu negocio con tecnología de punta.</p>
