@@ -24,6 +24,40 @@ class NewPasswordController extends Controller
         return view('custom.reset-password', ['request' => $request]);
     }
 
+    protected function rules()
+{
+    return [
+        'token' => 'required',
+        'email' => 'required|email',
+        'password' => [
+            'required',
+            'confirmed',
+            'min:8', // O las reglas que ya tenías (ej. Password::defaults())
+
+            // --- INICIO DE NUESTRA REGLA PERSONALIZADA ---
+            function ($attribute, $value, $fail) {
+                // Obtenemos el email de la solicitud (del campo oculto)
+                $email = request()->get('email');
+
+                if (!$email) {
+                    // Si no hay email, no podemos validar, pero la
+                    // regla 'required' de 'email' fallará primero.
+                    return;
+                }
+
+                // Buscamos al usuario por su email
+                $user = User::where('email', $email)->first();
+
+                // Si encontramos al usuario Y la contraseña coincide, fallamos
+                if ($user && Hash::check($value, $user->password)) {
+                    $fail('La nueva contraseña no puede ser igual a la anterior.');
+                }
+            }
+            // --- FIN DE NUESTRA REGLA PERSONALIZADA ---
+        ],
+    ];
+}
+
     /**
      * Handle an incoming new password request.
      *

@@ -1,14 +1,11 @@
-/* ==================================================================== */
-/* 1. Estilos Globales, Tipografía y Header Fijo */
-/* ==================================================================== */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Fondo gris claro */
-    padding-top: 70px; /* Espacio para el header fijo */
+    background-color: #f8f9fa; 
+    padding-top: 80px; 
 }
 
 .main-header {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -16,73 +13,144 @@ body {
     z-index: 1030;
 }
 
-/* Ajuste para que el Logo/Título esté realmente alineado a la derecha en la columna izquierda */
 .header-logo .navbar-brand {
     margin-right: 0;
 }
 
-/*
-* ====================================================================
-* 2. Carousel Sizing (Control de Altura)
-* ====================================================================
-*/
+/* Efecto hover para los botones de navegación */
+.nav-buttons .btn-link {
+    font-weight: 500;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    border-bottom: 2px solid transparent;
+    border-radius: 0; /* Quitar bordes redondeados para este efecto */
+    padding-bottom: 0.3rem;
+}
+
+.nav-buttons .btn-link:hover {
+    color: #4A90E2 !important; /* Usando el color de tu logo */
+    border-bottom-color: #4A90E2;
+}
+
+/* ==================================================================== */
+/* 3. Carrusel
+/* ==================================================================== */
 .carousel {
-    /* Altura máxima semántica de 350px para evitar que sea muy largo */
-    max-height: 350px;
+    /* Altura máxima para el carrusel */
+    max-height: 400px;
     overflow: hidden;
     margin-bottom: 3rem; 
 }
 
 .carousel-inner,
 .carousel-item {
-    max-height: 350px;
+    max-height: 400px;
 }
 
 .carousel-item img {
     width: 100%;
     /* Forzar la altura y usar 'cover' para que la imagen siempre llene el espacio */
-    height: 350px; 
-    object-fit: cover; 
+    height: 400px; 
+    object-fit: cover; /* Evita que la imagen se distorsione */
 }
 
-/*
-* ====================================================================
-* 3. Estilos de Tarjetas (Cards)
-* ====================================================================
-*/
-.card {
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    border: none; /* Eliminar el borde por defecto de Bootstrap */
+/* ==================================================================== */
+/* 4. Componente "Productos Relacionados"
+/* ==================================================================== */
+.offer-card {
+	background-color: #ffffff;
+	border-radius: 8px;
+	/* Sombra sutil */
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	/* Asegura que todas las tarjetas tengan la misma altura */
+	height: 100%;
+	/* Padding interno */
+	padding: 1.25rem; 
+	display: flex;
+	flex-direction: column;
+	transition: box-shadow 0.2s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.offer-card:hover {
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
 }
 
-.card-img-top {
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    height: 180px; /* Altura fija para las imágenes de las tarjetas */
-    object-fit: cover;
+.offer-card-title {
+	font-size: 1.3rem; /* Tamaño de título */
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: #0F1111; /* Color de texto principal */
 }
 
-/*
-* ====================================================================
-* 4. Estilos Responsive (Móvil)
-* ====================================================================
-*/
+/* Contenedor de la imagen para empujar el footer hacia abajo */
+.offer-card-image-container {
+	flex-grow: 1;
+	margin-bottom: 1rem;
+	text-align: center; /* Centra la imagen */
+}
+
+.offer-card-image {
+	width: 100%;
+	max-width: 300px; /* Evita que la imagen sea demasiado grande */
+	height: auto;
+	/* Mantiene la proporción */
+	aspect-ratio: 1/1; /* Cuadrada, como en el ejemplo */
+	object-fit: cover; /* La imagen cubre el espacio */
+	border-radius: 4px;
+}
+
+/* Estilo para la imagen que es una grilla (como la de bancos) */
+.offer-card-image-grid {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4/3; /* Proporción diferente para variedad */
+		object-fit: contain; /* 'Contain' para que se vean los logos */
+}
+
+.offer-card-footer {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: #007185; /* Color de enlace de Amazon */
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.offer-card-footer:hover {
+	color: #C7511F; /* Color hover de Amazon */
+	text-decoration: underline;
+}
+
+/* ==================================================================== */
+/* 5. Footer
+/* ==================================================================== */
+footer a.text-white:hover {
+    opacity: 1;
+    text-decoration: underline !important;
+}
+
+/* ==================================================================== */
+/* 6. Estilos Responsive (Móvil)
+/* ==================================================================== */
 @media (max-width: 576px) {
-    .header-logo, .header-auth, .nav-buttons {
-        /* Centra todos los elementos del header en móvil para que no se vea desordenado */
+    .header-logo, 
+    .header-auth, 
+    .nav-buttons {
+        /* Centra todos los elementos del header en móvil */
         text-align: center !important;
         justify-content: center !important;
         margin-top: 0.5rem;
     }
+    
     body {
         /* Más padding para el header que ahora ocupa más líneas */
-        padding-top: 150px; 
+        padding-top: 200px; /* Ajusta este valor si tu header es más alto o bajo en móvil */
+    }
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        /* Reducir la altura del carrusel en móviles */
+        max-height: 250px; 
+        height: 250px;
     }
 }

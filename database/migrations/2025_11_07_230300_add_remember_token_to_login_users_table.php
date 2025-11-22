@@ -10,21 +10,19 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    Schema::create('login_users', function (Blueprint $table) {
-        $table->id();
-        $table->string('username')->unique();
-        $table->string('password');
-        $table->rememberToken();
-        $table->timestamps();
-    });
-}
+    {
+        Schema::table('login_users', function (Blueprint $table) {
+        $table->rememberToken(); // <-- Esta línea añade la columna
+        });
+    }
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('login_users');
+        Schema::table('login_users', function (Blueprint $table) {
+            //
+        });
     }
 };

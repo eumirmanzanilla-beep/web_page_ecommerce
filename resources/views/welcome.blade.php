@@ -8,19 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fuente Inter para un look moderno -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
     <!-- Enlace al archivo CSS externo -->
     <link rel="stylesheet" href="{{ asset('css/welcome-styles.css') }}">
-
 </head>
 <body class="bg-light">
-    <!-- Script de Bootstrap debe ir al final del body -->
-
     <!-- HEADER: Fijo y Estructurado en 3 Columnas -->
     <header class="main-header">
         <div class="container">
             <div class="row align-items-center py-3">
-                
                 <!-- SECCIÓN 1 (Izquierda): Título y Logo -->
                 <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start header-logo">
                     <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}" style="font-weight: 700; color: #4A90E2;">
@@ -104,66 +99,69 @@
             </button>
         </div>
 
-        <!-- SECCIÓN DE CARDS: Diseño de 2x2 Responsivo -->
-        <div class="container py-5">
-            <h2 class="text-center mb-5" style="font-weight: 700; color: #343a40;">Nuestros Pilares de Valor</h2>
-            <!-- row-cols-md-2 asegura que haya 2 tarjetas por fila en dispositivos medianos y grandes -->
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                
-                <!-- CARD 1: En la primera fila, lado izquierdo -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/4A90E2/ffffff?text=Adaptabilidad" class="card-img-top" alt="Adaptabilidad">
-                        <div class="card-body">
-                            <h5 class="card-title text-primary" style="font-weight: 600;">Adaptabilidad Total</h5>
-                            <p class="card-text">
-                                En nuestro diccionario no existe la palabra imposible. 
-                                El equipo de trabajo está totalmente capacitado para adptarse a cualquier problema. 
-                                Lo difícil se vuelve fácil, y lo imposible, posible.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- INICIO DEL COMPONENTE -->
+        <div class="container my-5">
 
-                <!-- CARD 2: En la primera fila, lado derecho -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/28a745/ffffff?text=Responsabilidad" class="card-img-top" alt="Seguridad">
-                        <div class="card-body">
-                            <h5 class="card-title text-success" style="font-weight: 600;">Responsabilidad</h5>
-                            <p class="card-text">
-                                Nuestra prioridad es la tranquilidad del cliente. El trabajo de una empresa habla más que sus propias palabras,
-                                por eso nos comprometemos totalmente con cualquier trabajo, tanto en las buenas como en las malas, hasta que la muerte nos separe.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Las siguientes dos tarjetas inician automáticamente en la segunda fila -->
+        <!-- Título de la sección -->
+        <h2 class="mb-4" style="font-weight: 700;">Ofertas y promociones</h2>
 
-                <!-- CARD 3: En la segunda fila, lado izquierdo -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/ffc107/333333?text=" class="card-img-top" alt="Comunidad">
-                        <div class="card-body">
-                            <h5 class="card-title text-warning" style="font-weight: 600;">Comunidad Activa</h5>
-                            <p class="card-text">Únete a una red de profesionales y recibe el mejor soporte de nuestra comunidad y nuestro equipo de expertos.</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Fila que contiene las 4 tarjetas -->
+        <div class="row">
 
-                <!-- CARD 4: En la segunda fila, lado derecho -->
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <img src="https://placehold.co/600x180/dc3545/ffffff?text=Innovación" class="card-img-top" alt="Innovación">
-                        <div class="card-body">
-                            <h5 class="card-title text-danger" style="font-weight: 600;">Innovación Continua</h5>
-                            <p class="card-text">Estamos en constante evolución, integrando las últimas tendencias tecnológicas para que siempre estés un paso adelante.</p>
-                        </div>
+            <!-- Tarjeta 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="offer-card">
+                    <h3 class="offer-card-title">Ofertas de Buen Fin</h3>
+                    <div class="offer-card-image-container">
+                        <img src="https://placehold.co/300x300/F0F2F5/333?text=Imagen+Oferta+1" 
+                             class="offer-card-image" 
+                             alt="Ofertas de Buen Fin">
                     </div>
+                    <a href="#" class="offer-card-footer">Aprovecha las ofertas</a>
                 </div>
-                
             </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="offer-card">
+                    <h3 class="offer-card-title">Encuentra los bancos</h3>
+                    <div class="offer-card-image-container">
+                        <img src="https://placehold.co/400x300/F0F2F5/333?text=Logos+de+Bancos" 
+                             class="offer-card-image-grid" 
+                             alt="Bancos participantes">
+                    </div>
+                    <a href="#" class="offer-card-footer">Ver bancos participantes</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="offer-card">
+                    <h3 class="offer-card-title">Ahorra a meses</h3>
+                    <div class="offer-card-image-container">
+                        <img src="https://placehold.co/300x300/F0F2F5/333?text=MSI" 
+                             class="offer-card-image" 
+                             alt="Meses sin intereses">
+                    </div>
+                    <a href="#" class="offer-card-footer">Conoce más</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="offer-card">
+                    <h3 class="offer-card-title">Ofertas para Hogar</h3>
+                    <div class="offer-card-image-container">
+                        <img src="https://placehold.co/300x300/F0F2F5/333?text=Imagen+Hogar" 
+                             class="offer-card-image" 
+                             alt="Ofertas Hogar y Cocina">
+                    </div>
+                    <a href="#" class="offer-card-footer">Ver todas las ofertas</a>
+                </div>
+            </div>
+
+        </div> <!-- Fin de .row -->
+
         </div>
     </main>
 
