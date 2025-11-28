@@ -16,3 +16,5 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
 COPY --from=composer:2.9.2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
+
+# CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]
