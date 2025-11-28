@@ -46,7 +46,7 @@ class NewPasswordController extends Controller
                 }
 
                 // Buscamos al usuario por su email
-                $user = User::where('email', $email)->first();
+                $user = LoginUser::where('email', $email)->first();
 
                 // Si encontramos al usuario Y la contraseña coincide, fallamos
                 if ($user && Hash::check($value, $user->password)) {

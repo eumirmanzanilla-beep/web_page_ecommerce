@@ -37,7 +37,7 @@
         <div class="construction-icon">⚙️</div> 
         <h1>Página en Construcción</h1>
         <p class="mt-3">
-            Estamos trabajando arduamente para brindarte el mejor contenido de [Mi Proyecto].
+            Estamos trabajando arduamente para brindarte el mejor contenido de [UCanCook].
             ¡Vuelve pronto!
         </p>
         <a href="{{ url('/') }}" class="btn btn-primary mt-4 px-5 rounded-pill">Volver al Inicio</a>

@@ -16,6 +16,7 @@ class LoginUser extends Authenticatable implements MustVerifyEmail
         'username',
         'email', // Necesario para el reseteo de contraseña
         'password',
+        'role',
     ];
 
     protected $hidden = [
@@ -35,5 +36,20 @@ class LoginUser extends Authenticatable implements MustVerifyEmail
             'email_verified_at' => 'datetime',
             'password' => 'hashed', // <-- ¡LÓGICA CRÍTICA DE LA FÁBRICA AÑADIDA!
         ];
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class, 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id');
     }
 }

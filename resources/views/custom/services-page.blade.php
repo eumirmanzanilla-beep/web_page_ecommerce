@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - Mi Proyecto</title>
+    <title>Servicios - UCanCook</title>
     <!-- Incluir Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fuente Inter -->
@@ -23,7 +23,7 @@
                 <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start header-logo">
                     <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}" style="font-weight: 700; color: #4A90E2;">
                         <img src="https://placehold.co/30x30/4A90E2/ffffff?text=L" alt="Logo" width="30" height="30" class="d-inline-block me-2 rounded-circle">
-                        Mi Proyecto
+                        UCanCook
                     </a>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="col-12 col-sm-4 d-flex justify-content-center nav-buttons my-2 my-sm-0">
                     <a href="{{ url('/') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Inicio</a>
                     <a href="{{ route('services') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Servicios</a>
-                    <a href="{{ route('products') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Productos</a>
+                    <a href="{{ route('products.index') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Productos</a>
                     <a href="{{ route('contact') }}" class="btn btn-link text-dark text-decoration-none px-2 px-sm-3">Contacto</a>
                 </div>
 
@@ -117,7 +117,7 @@
     <!-- FOOTER: Copiado de welcome/products para consistencia -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-2">&copy; 2025 Mi Proyecto. Todos los derechos reservados.</p>
+            <p class="mb-2">&copy; 2025 UCanCook. Todos los derechos reservados.</p>
             <div class="d-flex justify-content-center">
                 <a href="#" class="text-white mx-3 text-decoration-none small opacity-75">Aviso de Privacidad</a>
                 <a href="#" class="text-white mx-3 text-decoration-none small opacity-75">Términos de Uso</a>
